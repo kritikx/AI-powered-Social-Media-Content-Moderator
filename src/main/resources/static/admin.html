@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+
+<div class="admin-container">
+
+    <!-- 🔐 Admin Login Form -->
+    <div id="loginForm" class="login-form">
+        <div class="login-header">
+            <i>🔒</i>
+            <h2>Admin Login</h2>
+        </div>
+        <form id="adminLogin">
+            <div class="form-group">
+                <label for="adminUsername">Username</label>
+                <input type="text" id="adminUsername" placeholder="Enter admin username" required />
+            </div>
+            <div class="form-group">
+                <label for="adminPassword">Password</label>
+                <input type="password" id="adminPassword" placeholder="Enter password" required />
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <div id="loginError" class="error hidden">Invalid credentials</div>
+    </div>
+
+    <!-- 📋 Admin Dashboard -->
+    <div id="adminDashboard" class="admin-dashboard hidden">
+
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1>🧑‍💼 Admin Dashboard</h1>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+
+        <!-- Dashboard Actions -->
+        <div class="dashboard-actions">
+            <button onclick="loadUsers()" class="action-btn">🔄 Refresh User List</button>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="banned-users-section">
+                <h2>👥 All Users</h2>
+                <div class="table-container">
+                    <table class="data-table" id="userTable">
+                        <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Strikes</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="adminResult">
+                        <!-- User rows inserted by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

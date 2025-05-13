@@ -1,0 +1,308 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4895ef;
+  --danger-color: #f72585;
+  --success-color: #4cc9f0;
+  --warning-color: #f8961e;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --gray-color: #6c757d;
+  --white-color: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+/* Common Styles */
+.hidden {
+  display: none !important;
+}
+
+.result {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  border-left: 4px solid var(--primary-color);
+}
+
+.error {
+  background-color: rgba(247, 37, 133, 0.1);
+  border-left-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+.success {
+  background-color: rgba(76, 201, 240, 0.1);
+  border-left-color: var(--success-color);
+  color: var(--success-color);
+}
+
+/* Main Container */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--gray-color);
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--gray-color);
+  margin-top: 0.25rem;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-text, .btn-loader {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Admin Styles */
+.admin-body {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.login-header i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logout-btn {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+}
+
+.logout-btn:hover {
+  background-color: #d3166b;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.action-btn {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  padding: 0.75rem 1.5rem;
+}
+
+.action-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.dashboard-content {
+  padding: 1.5rem;
+}
+
+.banned-users-section {
+  margin-top: 2rem;
+}
+
+.banned-users-section h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th, .data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background-color: var(--light-color);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-table th:hover {
+  background-color: #e9ecef;
+}
+
+.data-table tr:hover {
+  background-color: rgba(67, 97, 238, 0.05);
+}
+
+.data-table .action-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-container, .login-form {
+    padding: 1.5rem;
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
